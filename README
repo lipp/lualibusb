@@ -12,6 +12,11 @@ Republica, Uruguay.
 
 See LICENSE
 
+Installation
+============
+
+sudo luarocks install https://github.com/lipp/lualibusb/raw/master/rockspecs/lualibusb-scm-1.rockspec
+
 	
 Intro
 =====
