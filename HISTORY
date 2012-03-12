@@ -1,0 +1,34 @@
+HISTORY for lualibusb 1.0
+
+* Changes from version 0.5 to 1.0
+  -------------------------------
+
+  + memory leaks solved, thanks to Viterbo Rodriguez for contribution.
+  + history file added
+
+* Changes from version 0.4 to 5.0
+  -------------------------------
+  
+  + Win32 compatibility, thanks to Rogério Santos for contribution.
+  + bugs in Makefile corrected
+  + name of the .so file changed from lualibusb to libluausb
+
+* Changes from version 0.3 to 0.4
+  -------------------------------
+  
+  + Makefile added.
+
+* Changes from version 0.2 to 0.3
+  -------------------------------
+
+  + l_usb_control_msg return the number of bytes sent
+  + lua 5.0 compatibility	
+
+* Changes from version 0.1 to 0.2
+  -------------------------------
+
+  + Added endpoint_descriptor, get_descriptor and get_descriptor_by_endpoint.
+
+  -------------------------------
+
+(end of HISTORY)

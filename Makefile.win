@@ -1,0 +1,31 @@
+# lualibusb Win32 Makefile
+# Author: Rogério Santos
+
+LIBUSB_SRC=C:\API\libusb-win32\include 				#change with your libusb-win32 sources folder
+LUA_SRC=C:\API\lua-5.1\src    					#change with your lua sources folder
+
+CC=gcc						  		#needed in some cases
+LD=gcc						  		#same thing
+
+#this WINDOWS define is for proper compilation of the
+#luaopen_libusb(lua_State *L) funtion with the Windows DLL entry.
+
+OPTS=-O2 -Wall -D_GNU_SOURCE -DWINDOWS	
+
+OBJS=lualibusb.o
+OBJS_SO = libusb.dll
+LIBS = -llua -lusb						#the needed libraries
+
+CFLAGS=$(OPTS) -I$(LIBUSB_SRC) -I$(LUA_SRC) 
+LD_FLAGS=-LC:\API\libusb-win32\lib\gcc				#the gcc lib folder in the libusb-win32 folder
+LD_FLAGS+= $(LIBS)
+
+all: lualibusb dll
+
+lualibusb: $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS) -c
+
+dll: $(OBJS)
+	$(LD) -O -shared -o $(OBJS_SO) $(OBJS) $(LD_FLAGS)
+clean:
+	-rm $(OBJS) $(OBJS_SO)
