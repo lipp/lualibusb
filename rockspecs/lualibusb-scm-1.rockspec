@@ -1,11 +1,11 @@
 package = "lualibusb"
 version = "scm-1"
 source = {
-  url = "git://github.com/Neopallium/lua-zmq.git",
+  url = "git://github.com/lipp/lualibusb.git",
 }
 description = {
-  summary = "Lua bindings to ",
-  homepage = "http://github.com/Neopallium/lua-zmq",
+  summary = "Lua bindings to libusb (lualibusb)",
+  homepage = "http://github.com/lipp/lualibusb",
   license = "MIT/X11",
 }
 dependencies = {
